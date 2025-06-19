@@ -39,7 +39,7 @@
     nano
     wget
     git
-    # uidmap # this package is required to install rootless docker, to be more specific we need newuidmap and newgidmap commands which are in the uidmap package.
+    uidmap # this package is required to install rootless docker, to be more specific we need newuidmap and newgidmap commands which are in the uidmap package.
   ];
 
   # Install docker in rootless mode
