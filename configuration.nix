@@ -54,6 +54,9 @@
             isNormalUser = true;
             description = "default user";
             extraGroups = [ "wheel" "docker" ];
+            # These ranges are required for rootless Docker to work.
+            subUidRanges = [ { startUid = 100000; count = 65536; } ];
+            subGidRanges = [ { startGid = 100000; count = 65536; } ];
         };
     };
 
