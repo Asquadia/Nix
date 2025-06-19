@@ -28,8 +28,10 @@
 
   # setup keyboard
   console.keyMap = "fr";
-  services.xserver.xkb.layout = "fr";
-  services.xserver.xkb.variant = "azerty";
+  services.xserver.xkb = {
+    layout = "fr";
+    variant = "azerty";
+  };
 
   # List packages installed in system profile.
   # You can use Https://search.nixos.org/ to find more packages (and options).
@@ -37,7 +39,7 @@
     nano
     wget
     git
-    uidmap # this package is required to install rootless docker, to be more specific we need newuidmap and newgidmap commands which are in the uidmap package.
+    # uidmap # this package is required to install rootless docker, to be more specific we need newuidmap and newgidmap commands which are in the uidmap package.
   ];
 
   # Install docker in rootless mode
@@ -67,5 +69,5 @@
 
   services.qemuGuest.enable = true;
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.05"; # This is the last line, so the semicolon is optional here.
 }
