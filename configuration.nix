@@ -38,8 +38,8 @@
   environment.systemPackages = with pkgs; [
     nano
     wget
+    shadow
     git
-    uidmap # this package is required to install rootless docker, to be more specific we need newuidmap and newgidmap commands which are in the uidmap package.
   ];
 
   # Install docker in rootless mode
@@ -69,5 +69,5 @@
 
   services.qemuGuest.enable = true;
 
-  system.stateVersion = "25.05"; # This is the last line, so the semicolon is optional here.
+  system.stateVersion = "25.05";
 }
