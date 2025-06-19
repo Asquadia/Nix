@@ -53,7 +53,7 @@
         ascadia = {
             isNormalUser = true;
             description = "default user";
-            extraGroups = ["wheel" "docker"];
+            extraGroups = [ "wheel" "docker" ];
         };
     };
 
