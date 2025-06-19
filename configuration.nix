@@ -54,7 +54,7 @@
             isNormalUser = true;
             description = "default user";
             extraGroups = ["wheel" "docker"];
-        }
+        };
     };
 
     # Configure SSH
